@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paucasesnovescifp.cat/schema/cifp.json",
+  "title": "cifp",
+  "type": "object",
+  "properties": {
+    "alumne": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Alumne" }
+    },
+    "professor": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Professor" }
+    }
+  },
+  "additionalProperties": false,
+  "anyOf": [
+    { "required": ["alumne"] },
+    { "required": ["professor"] }
+  ],
+  "$defs": {
+    "Cicle": {
+      "type": "string",
+      "enum": ["DAM", "DAW", "ASIX", "SMX", "SEIA", "ER", "AUT"]
+    },
+    "Departament": {
+      "type": "string",
+      "enum": ["Informàtica", "Electricitat", "Automoció"]
+    },
+
+    "Alumne": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "nom": { "type": "string" },
+        "llinatges": { "type": "string" },
+        "data_naixement": { "type": "string" },
+        "correu": { "type": "string" },
+        "telefon": { "type": "string" },
+        "adreça": { "type": "string" },
+
+        "data_matricula": { "type": "string" },
+        "curs": { "$ref": "#/$defs/Cicle" }
+      },
+      "required": ["id", "nom", "llinatges", "data_matricula", "curs"],
+      "additionalProperties": false
+    },
+
+    "Assignatura": {
+      "type": "object",
+      "properties": {
+        "id_assignatura": { "type": "integer" },
+        "nom_assignatura": { "type": "string" },
+        "cicle": { "$ref": "#/$defs/Cicle" },
+        "data_inici": { "type": "string" },
+        "data_final": { "type": "string" }
+      },
+      "required": ["id_assignatura", "nom_assignatura", "cicle"],
+      "additionalProperties": false
+    },
+
+    "Professor": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "nom": { "type": "string" },
+        "llinatges": { "type": "string" },
+        "data_naixement": { "type": "string" },
+        "correu": { "type": "string" },
+        "telefon": { "type": "string" },
+        "adreça": { "type": "string" },
+
+        "data_incorporacio": { "type": "string" },
+        "departament": { "$ref": "#/$defs/Departament" },
+        "assignatura": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Assignatura" }
+        }
+      },
+      "required": ["id", "nom", "llinatges", "data_incorporacio", "departament"],
+      "additionalProperties": false
+    }
+  }
+}
+
+

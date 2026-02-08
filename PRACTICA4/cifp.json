@@ -1,0 +1,34 @@
+{
+  "alumne": [
+    {
+      "id": 1,
+      "nom": "Alfred",
+      "llinatges": "Casas",
+      "data_matricula": "22-01-2025",
+      "curs": "DAW"
+    },
+    {
+      "id": 2,
+      "nom": "Asadsad",
+      "llinatges": "Cdffdf",
+      "data_matricula": "22-01-2025",
+      "curs": "DAM"
+    }
+  ],
+  "professor": [
+    {
+      "id": 3,
+      "nom": "Joan",
+      "llinatges": "Mayol",
+      "data_incorporacio": "22-01-2025",
+      "departament": "Informàtica",
+      "assignatura": [
+        {
+          "id_assignatura": 10,
+          "nom_assignatura": "Programació",
+          "cicle": "DAM"
+        }
+      ]
+    }
+  ]
+}

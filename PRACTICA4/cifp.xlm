@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<cifp xmlns="https://paucasesnovescifp.cat"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://paucasesnovescifp.cat cifp.xsd">
+
+  <alumne id="1">
+    <nom>Alfred</nom>
+    <llinatges>Casas</llinatges>
+    <data_matricula>22-01-2025</data_matricula>
+    <curs>DAW</curs>
+  </alumne>
+
+  <alumne id="2">
+    <nom>Asadsad</nom>
+    <llinatges>Cdffdf</llinatges>
+    <data_matricula>22-01-2025</data_matricula>
+    <curs>DAM</curs>
+  </alumne>
+
+  <professor id="3">
+    <nom>Joan</nom>
+    <llinatges>Mayol</llinatges>
+    <data_incorporacio>22-01-2025</data_incorporacio>
+    <departament>Informàtica</departament>
+    <assignatura id_assignatura="10">
+      <nom_assignatura cicle="DAM">Programació</nom_assignatura>
+    </assignatura>
+  </professor>
+
+</cifp>
